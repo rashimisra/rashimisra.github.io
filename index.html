@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,12 @@
     <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link id="theme-link" rel="stylesheet" href="theme-light.css">
+    <script>
+        function switchTheme(theme) {
+            document.getElementById('theme-link').href = theme;
+        }
+    </script>
 </head>
 <body>
     <main>
@@ -16,14 +21,22 @@
             </div>
         </section>
         <section id="projects">
-            <div class="project">
-                <h3><a href="https://github.com/rm4063/flaskapp">Flaskapp</a></h3>
-                <p>This is a live website was created for the Chinese Loans to Africa Database, 2000-2023, provided by Boston University's Global Development Policy Center</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/rm4063/data-databasefinal">BBC Critics</a></h3>
-                <p>This is information on movies and their directors using BBC website.</p>
+            <div class="container">
+                <div class="project">
+                    <h3><a href="https://github.com/rm4063/flaskapp">Flaskapp</a></h3>
+                    <p>This is a live website created for the Chinese Loans to Africa Database, 2000-2023, provided by Boston University's Global Development Policy Center.</p>
+                </div>
+                <div class="project">
+                    <h3><a href="https://github.com/rm4063/data-databasefinal">BBC Critics</a></h3>
+                    <p>This is information on movies and their directors using BBC website.</p>
+                </div>
+                <!-- Add more project divs as needed -->
             </div>
         </section>
+        <div class="theme-switcher">
+            <button onclick="switchTheme('theme-light.css')">Light Theme</button>
+            <button onclick="switchTheme('theme-dark.css')">Dark Theme</button>
+        </div>
+    </main>
 </body>
 </html>
