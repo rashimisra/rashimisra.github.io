@@ -2,30 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>Rashi Mishra</title>
+    <style>
+        body {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 0 10px;
+            font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: #444;
+            background: #f5f5f7;
+        }
+        h1 {
+            line-height: 1.2;
+            border-bottom: 1px solid #4a4a4a;
+            padding-bottom: 10px;
+        }
+        a {
+            color: #007aff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 30px;
+        }
+        .project {
+            margin-bottom: 20px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+        .project:hover {
+            background-color: #f0f4ff;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <section id="intro">
-            <div class="hero">
-                <h1>Rashi Mishra</h1>
-                <p>I am a student data journalist at Columbia Journalism School. Here are my projects.</p>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="project">
-                <h3><a href="https://github.com/rm4063/flaskapp">Flaskapp</a></h3>
-                <p>This is a live website was created for the Chinese Loans to Africa Database, 2000-2023, provided by Boston University's Global Development Policy Center</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/rm4063/data-databasefinal">BBC Critics</a></h3>
-                <p>This is information on movies and their directors using BBC website.</p>
-            </div>
-        </section>
-    </main>
+    <h1>Rashi Mishra</h1>
+    
+    <p>Student data journalist at Columbia Journalism School. I am into politics, elections, crime, government policies and everything in between. I am being trained to do data-driven stories, using Python, SQL, R.</p>
+
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3><a href="https://github.com/rm4063/flaskapp">Chinese Loans to Africa Database</a></h3>
+        <p>Live website for Chinese Loans to Africa Database (2000-2023), created in collaboration with Boston University's Global Development Policy Center.</p>
+    </div>
+
+    <div class="project">
+        <h3><a href="https://github.com/rm4063/data-databasefinal">BBC Critics</a></h3>
+        <p>Comprehensive database of movies and directors sourced from the BBC website, providing insights into film criticism and industry trends.</p>
+    </div>
+
+    <div class="project">
+        <h3><a href="https://github.com/rm4063/project1">UK Parliamentary Suspensions</a></h3>
+        <p>Analytical project examining 21 MP suspensions over a 13-year period, exploring patterns of political misconduct.</p>
+    </div>
+
+    <div class="project">
+        <h3><a href="https://github.com/rashimishhra/in-one-chart">California Fire Supression Funds</a></h3>
+        <p>Fire suppression costs for the California Department of Forestry and Fire Protection (CAL FIRE) and the National Interagency Fire Center (NIFC) from 2015 to 2024.</p>
+    </div>
+
+    <p>Contact: <a href="mailto:rm4063@columbia.edu">rm4063@columbia.edu</a></p>
 </body>
 </html>
