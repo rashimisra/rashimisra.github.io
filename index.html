@@ -6,68 +6,147 @@
     <title>Rashi Mishra</title>
     <style>
         body {
-            max-width: 650px;
-            margin: 40px auto;
-            padding: 0 10px;
-            font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            color: #444;
-            background: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #2d3436;
+            background: #fff;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .left-section {
+            width: 35%;
+            padding: 60px 40px;
+            background: #ffeaa7;
+            border-right: 1px solid #fdcb6e;
+        }
+        .right-section {
+            width: 65%;
+            padding: 60px 40px;
+            background: #fff;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;  /* Changed from 50% to 4px for slight rounding */
+            background: #fdcb6e;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2d3436;
+            font-size: 0.9em;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(253, 203, 110, 0.3);
         }
         h1 {
-            line-height: 1.2;
-            border-bottom: 1px solid #4a4a4a;
-            padding-bottom: 10px;
+            font-size: 2.4em;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            color: #2d3436;
+            margin-bottom: 1.2em;
+        }
+        h3 {
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 0.4em;
+            color: #2d3436;
         }
         a {
-            color: #007aff;
+            color: #e17055;
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
         }
         a:hover {
-            text-decoration: underline;
+            color: #d63031;
+            border-bottom-color: #d63031;
         }
-        ul {
-            padding-left: 30px;
+        .intro {
+            font-size: 1.1em;
+            color: #2d3436;
+            margin-bottom: 2em;
+            line-height: 1.8;
         }
         .project {
-            margin-bottom: 20px;
-            background: #ffffff;
-            padding: 15px;
+            margin-bottom: 2.5em;
+            padding: 1.5em;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
+            background: #fff;
+            border: 1px solid #ffeaa7;
+            transition: all 0.2s ease;
         }
         .project:hover {
-            background-color: #f0f4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(253, 203, 110, 0.2);
+            border-color: #fdcb6e;
+        }
+        .project p {
+            margin-top: 0.4em;
+            color: #636e72;
+        }
+        .contact {
+            margin-top: 2em;
+            color: #2d3436;
+            font-size: 0.95em;
+            padding: 1em;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 6px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-section, .right-section {
+                width: auto;
+                padding: 30px 20px;
+            }
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Rashi Mishra</h1>
-    
-    <p>Student data journalist at Columbia Journalism School. I am into politics, elections, crime, government policies and everything in between. I am being trained to do data-driven stories, using Python, SQL, R.</p>
+    <div class="container">
+        <div class="left-section">
+            <div class="profile-image">
+                Profile Picture
+                <!-- Replace this div with an img tag when you have a picture -->
+                <!-- <img src="9bbada12-026c-46a9-b1e7-15fb8aaa6c4e.jpg" alt="Rashi Mishra" class="profile-image"> -->
+            </div>
+            <h1>Rashi Mishra</h1>
+            <p class="intro">Student data journalist at Columbia Journalism School. I am into politics, elections, crime, government policies and everything in between. I am being trained to do data-driven stories, using Python, SQL, R.</p>
+            <div class="contact">
+                Contact: <a href="mailto:rm4063@columbia.edu">rm4063@columbia.edu</a>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="project">
+                <h3><a href="https://github.com/rm4063/flaskapp">Chinese Loans to Africa Database</a></h3>
+                <p>Live website for Chinese Loans to Africa Database (2000-2023), created in collaboration with Boston University's Global Development Policy Center.</p>
+            </div>
 
-    <h2>Projects</h2>
+            <div class="project">
+                <h3><a href="https://github.com/rm4063/data-databasefinal">BBC Critics</a></h3>
+                <p>Comprehensive database of movies and directors sourced from the BBC website, providing insights into film criticism and industry trends.</p>
+            </div>
 
-    <div class="project">
-        <h3><a href="https://github.com/rm4063/flaskapp">Chinese Loans to Africa Database</a></h3>
-        <p>Live website for Chinese Loans to Africa Database (2000-2023), created in collaboration with Boston University's Global Development Policy Center.</p>
+            <div class="project">
+                <h3><a href="https://github.com/rm4063/project1">UK Parliamentary Suspensions</a></h3>
+                <p>Analytical project examining 21 MP suspensions over a 13-year period, exploring patterns of political misconduct.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/rashimishhra/in-one-chart">California Fire Suppression Funds</a></h3>
+                <p>Fire suppression costs for the California Department of Forestry and Fire Protection (CAL FIRE) and the National Interagency Fire Center (NIFC) from 2015 to 2024.</p>
+            </div>
+        </div>
     </div>
-
-    <div class="project">
-        <h3><a href="https://github.com/rm4063/data-databasefinal">BBC Critics</a></h3>
-        <p>Comprehensive database of movies and directors sourced from the BBC website, providing insights into film criticism and industry trends.</p>
-    </div>
-
-    <div class="project">
-        <h3><a href="https://github.com/rm4063/project1">UK Parliamentary Suspensions</a></h3>
-        <p>Analytical project examining 21 MP suspensions over a 13-year period, exploring patterns of political misconduct.</p>
-    </div>
-
-    <div class="project">
-        <h3><a href="https://github.com/rashimishhra/in-one-chart">California Fire Supression Funds</a></h3>
-        <p>Fire suppression costs for the California Department of Forestry and Fire Protection (CAL FIRE) and the National Interagency Fire Center (NIFC) from 2015 to 2024.</p>
-    </div>
-
-    <p>Contact: <a href="mailto:rm4063@columbia.edu">rm4063@columbia.edu</a></p>
 </body>
 </html>
