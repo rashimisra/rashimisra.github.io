@@ -8,134 +8,103 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            color: #2d3436;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: #fff;
         }
         .container {
-            display: flex;
-            min-height: 100vh;
-        }
-        .left-section {
-            width: 35%;
-            padding: 60px 40px;
-            background: #fff5d7;  
-            border-right: 1px solid #ffe5a0;  
-        }
-        .right-section {
-            width: 65%;
-            padding: 60px 40px;
-            background: #fff;
-        }
-        .profile-image {
-            width: auto;
-            height: auto;
-            max-width: 400px; 
-            max-height: 400px; 
-            border-radius: 2px;
-            background: #ffb89d;  
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2d3436;
-            font-size: 0.9em;
-            border: 2px solid #fff;
-            box-shadow: 0 2px 10px rgba(255, 229, 160, 0.3);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
         h1 {
             font-size: 2.4em;
-            font-weight: 300;
-            letter-spacing: -0.5px;
-            color: #2d3436;
-            margin-bottom: 1.2em;
+            font-weight: 400;
+            margin-bottom: 1rem;
         }
         h3 {
             font-size: 1.3em;
-            font-weight: 400;
-            margin-bottom: 0.4em;
-            color: #e17055;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
         a {
-            color: #e17055;
+            color: #555;
             text-decoration: none;
             border-bottom: 1px solid transparent;
-            transition: all 0.2s ease;
+            transition: border-bottom 0.2s ease;
         }
         a:hover {
-            color: #d63031;
-            border-bottom-color: #d63031;
+            border-bottom-color: #555;
         }
         .intro {
             font-size: 1.1em;
-            color: #2d3436;
-            margin-bottom: 2em;
-            line-height: 1.8;
-        }
-        .project {
-            margin-bottom: 2.5em;
-            padding: 1.5em;
-            border-radius: 8px;
-            background: #fff;
-            border: 1px solid #fff5d7;  
-            transition: all 0.2s ease;
-        }
-        .project:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 229, 160, 0.2);
-            border-color: #ffe5a0;  
-        }
-        .project p {
-            margin-top: 0.4em;
-            color: #636e72;
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
         .contact {
-            margin-top: 2em;
-            color: #2d3436;
-            font-size: 0.95em;
-            padding: 1em;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 6px;
+            margin: 2rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .contact a {
+            margin-right: 1.5rem;
+        }
+        .project {
+            margin-bottom: 2rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .project p {
+            margin-top: 0.5rem;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <div class="container">
-            <h1>Rashi Mishra</h1>
-            <p class="intro">Hi! I am a data student journalist at Columbia Journalism School. 
-                Previous education: City, University of London; Asian College of Journalism; Lady Shri Ram College, University of Delhi
-                Previous work: <a href="https://indianexpress.com/profile/author/rashi-mishra/">The Indian Express</a>, Freelance (London): PA Media, <a href="https://www.inma.org/author/Rashi-Mishra">INMA World Congress</a>, British Doc Filmmaker
-                Computing languages learnt: Python, SQL, R
-            </p>
-            <div class="contact">
-                         <a href="mailto:rm4063@columbia.edu">rm4063@columbia.edu</a>
-                         <a href="https://github.com/rashimishhra">Github</a>
-                         <a href="https://www.linkedin.com/in/rashirecords98/">LinkedIn</a>
-                         <a href="https://bsky.app/profile/rashimishra.bsky.social">Bluesky</a>
-            </div>
+        <h1>Rashi Mishra</h1>
+        <p class="intro">
+            Hi! I am a data student journalist at Columbia Journalism School.<br>
+            <strong>Previous education:</strong> City, University of London; Asian College of Journalism; Lady Shri Ram College, University of Delhi<br>
+            <strong>Previous work:</strong> <a href="https://indianexpress.com/profile/author/rashi-mishra/">The Indian Express</a>, Freelance (London): PA Media, <a href="https://www.inma.org/author/Rashi-Mishra">INMA World Congress</a>, British Doc Filmmaker<br>
+            <strong>Computing languages:</strong> Python, SQL, R
+        </p>
+        
+        <div class="contact">
+            <a href="mailto:rm4063@columbia.edu">rm4063@columbia.edu</a>
+            <a href="https://github.com/rashimishhra">Github</a>
+            <a href="https://www.linkedin.com/in/rashirecords98/">LinkedIn</a>
+            <a href="https://bsky.app/profile/rashimishra.bsky.social">Bluesky</a>
         </div>
         
-        <div class="right-section">
+        <div class="projects">
             <div class="project">
                 <h3><a href="https://github.com/rm4063/flaskapp">Chinese Loans to Africa Database</a></h3>
                 <p>Live website for Chinese Loans to Africa Database (2000-2023), created in collaboration with Boston University's Global Development Policy Center.</p>
             </div>
+            
             <div class="project">
                 <h3><a href="https://rashimishhra.github.io/project1/">UK Parliamentary Suspensions</a></h3>
                 <p>Analytical project examining 21 MP suspensions over a 13-year period, exploring patterns of political misconduct.</p>
             </div>
+            
             <div class="project">
                 <h3><a href="https://github.com/rashimishhra/in-one-chart">California Fire Suppression Funds</a></h3>
                 <p>Fire suppression costs for the California Department of Forestry and Fire Protection (CAL FIRE) and the National Interagency Fire Center (NIFC) from 2015 to 2024.</p>
             </div>
+            
             <div class="project">
                 <h3><a href="https://rashimishhra.github.io/fines_by_coib_2014-25/">NYC COIB Fines</a></h3>
                 <p>Amount (US $) and number of times fines paid by NYC government agencies for conflict of interests.</p>
-        </div>
+            </div>
+            
             <div class="project">
                 <h3><a href="https://rashimishhra.github.io/Chinavisits_responsive-ai2html/">Chinese Leaders Visits</a></h3>
                 <p>China's Powerful Duo Jiabao and Jintao dominated international visits from 1997 to early 2020.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
