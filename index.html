@@ -2,168 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rashi Mishra</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <style>
         body {
             font-family: "Source Code Pro", monospace;
-            font-size: 22px;
-            color: black;
-            font-weight: 400;
-            line-height: 1.4;
+            background: #f5f6fa;
+            color: #222;
             margin: 0;
             padding: 0;
-            background: white;
         }
-        #container {
-            padding: 10px;
+        main {
+            max-width: 640px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px #e0e0e0;
+            padding: 32px;
         }
-        a {
-            background: white;
-            color: black;
+        h1 {
+            font-size: 2.3em;
+            letter-spacing: 1px;
+        }
+        h2 {
+            margin-top: 2em;
+            font-size: 1.25em;
+            color: #444;
+            border-bottom: 1.5px dashed #d8d8d8;
+            padding-bottom: 0.3em;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .links a {
+            margin-right: 18px;
+            background: #ececec;
+            color: #183153;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 2px;
-            border-bottom: 1px solid black;
-            transition: .4s all;
+            transition: background 0.2s;
+            font-size: 1em;
         }
-        a:hover {
-            background-color: lightgray;
-            color: black;
+        .links a:hover {
+            background: #d4e6fd;
         }
-        .contact a {
-            margin-right: 15px;
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .project {
-            margin-bottom: 1.5em;
+        .project-list li {
+            margin-bottom: 1.1em;
         }
-        .project-title {
-            margin-bottom: 0.3em;
+        .project-list a {
+            font-weight: 700;
+            color: #374151;
         }
-        .project-desc {
-            margin-left: 20px;
-            margin-top: 0;
-            margin-bottom: 0;
+        .desc {
+            margin-left: 16px;
+            color: #555;
+            font-size: 0.98em;
         }
-        .section-divider {
-            margin: 2em 0 1em 0;
+        @media (max-width: 700px) {
+            main { padding: 16px; }
+            h1 { font-size: 1.5em; }
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <section class="top">
-            ==============
+<main>
+    <h1>Rashi Mishra</h1>
+    <div class="section">
+        <p>
+            Digital journalist at <a href="https://journalism.columbia.edu/" target="_blank">Columbia Journalism School</a><br>
+            Prev: City, University of London • Asian College of Journalism • LSR, Delhi University
             <br>
-            Rashi Mishra
+            Byline: 
+            <a href="https://indianexpress.com/profile/author/rashi-mishra/" target="_blank">The Indian Express</a>,
+            Freelance with PA Media, INMA World Congress, British Doc Filmmaker
             <br>
-            <br>
-            <div class="bio">
-                Hi! I am a digital journalist and is currently studying at <a href="https://journalism.columbia.edu/" target="_blank">Columbia Journalism School</a>.
-                <br>
-                <br>
-                <strong>Previous education:</strong> City, University of London; Asian College of Journalism; Lady Shri Ram College, University of Delhi
-                <br>
-                <br>
-                <strong>Previous work:</strong> <a href="https://indianexpress.com/profile/author/rashi-mishra/" target="_blank">The Indian Express</a>, Freelance (London): PA Media, <a href="https://www.inma.org/author/Rashi-Mishra" target="_blank">INMA World Congress</a>, British Doc Filmmaker
-                <br>
-                <br>
-                <strong>Computing languages:</strong> Python, SQL, R
-                <br>
-                <br>
-                <div class="contact">
-                    <a href="mailto:rm4063@columbia.edu">Email</a>
-                    <a href="https://github.com/rashimisra" target="_blank">Github</a>
-                    <a href="https://www.linkedin.com/in/rashirecords98/" target="_blank">LinkedIn</a>
-                    <a href="https://bsky.app/profile/rashimishra.bsky.social" target="_blank">Bluesky</a>
-                    <a href="path/to/your/cv.pdf" target="_blank">CV</a>
-                </div>
-            </div>
-        </section>
-        
-        <div class="section-divider">
-            ==================================
-            <br>
-            Data Stories
-        </div>
-        
-        <div class="project">
-            <div class="project-title">
-                <a href="https://rashimisra.github.io/IVY-FUNDING/" target="_blank">Visualizing Ivy Funds</a>
-            </div>
-            <div class="project-desc">
-                Federal Cuts on Ivy Leagues: Why do they matter?
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://rashimisra.github.io/Chinavisits_responsive-ai2html/" target="_blank">Chinese Leaders Visits</a>
-            </div>
-            <div class="project-desc">
-                China's Powerful Duo Jiabao and Jintao dominated international visits from 1997 to early 2020
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://rashimisra.github.io/fines_by_coib_2014-25/" target="_blank">NYC COIB Fines</a>
-            </div>
-            <div class="project-desc">
-                Amount (US $) and number of times fines paid by NYC government agencies for conflict of interests
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://github.com/rashimisra/in-one-chart" target="_blank">California Fire Suppression Funds</a>
-            </div>
-            <div class="project-desc">
-                Fire suppression costs for the California Department of Forestry and Fire Protection (CAL FIRE) and the National Interagency Fire Center (NIFC) from 2015 to 2024
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://rashimisra.github.io/project1/" target="_blank">UK Parliamentary Suspensions</a>
-            </div>
-            <div class="project-desc">
-                Analytical project examining 21 MP suspensions over a 13-year period, exploring patterns of political misconduct
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://flaskapp-9tdq.onrender.com/" target="_blank">Chinese Loans to Africa Database</a>
-            </div>
-            <div class="project-desc">
-                <a href="https://github.com/rashimisra/flaskapp" target="_blank">Live website for Chinese Loans to Africa Database</a> (2000-2023), created in collaboration with Boston University's Global Development Policy Center
-            </div>
-        </div>
-
-        <div class="section-divider">
-            ==================================
-            <br>
-            Other Stories
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/" target="_blank">City Increasingly Swaps Soil for Synthetic as Green Space Gets Less Green</a>
-            </div>
-            <div class="project-desc">
-                The field in Bennett Park, opened in November, is joining a growing number of green spaces in New York City that are actually plastic, drawing questions and concerns from environmentalists and residents.
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="project-title">
-                <a href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">First Legal Cannabis Dispensaries in Uptown</a>
-            </div>
-            <div class="project-desc">
-                Inwood and Washington Heights are the latest uptown neighborhoods to open licensed cannabis shops, nearly three years after adult use of cannabis became legal in New York State.
-            </div>
+            Coding: Python • SQL • R
+        </p>
+        <div class="links">
+            <a href="mailto:rm4063@columbia.edu">Email</a>
+            <a href="https://github.com/rashimisra" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/rashirecords98/" target="_blank">LinkedIn</a>
+            <a href="https://bsky.app/profile/rashimishra.bsky.social" target="_blank">Bluesky</a>
+            <a href="path/to/your/cv.pdf" target="_blank">CV</a>
         </div>
     </div>
+
+    <div class="section">
+        <h2>Data Stories</h2>
+        <ul class="project-list">
+            <li>
+                <a href="https://rashimisra.github.io/IVY-FUNDING/" target="_blank">Visualizing Ivy Funds</a>
+                <span class="desc">• Federal cuts on Ivy Leagues: Why do they matter?</span>
+            </li>
+            <li>
+                <a href="https://rashimisra.github.io/Chinavisits_responsive-ai2html/" target="_blank">Chinese Leaders Visits</a>
+                <span class="desc">• Jiabao and Jintao's international tours, 1997–2020</span>
+            </li>
+            <li>
+                <a href="https://rashimisra.github.io/fines_by_coib_2014-25/" target="_blank">NYC COIB Fines</a>
+                <span class="desc">• NYC agencies and conflict of interest fines (amounts & frequency)</span>
+            </li>
+            <li>
+                <a href="https://github.com/rashimisra/in-one-chart" target="_blank">California Fire Suppression Funds</a>
+                <span class="desc">• Costs for CAL FIRE/NIFC, 2015–2024</span>
+            </li>
+            <li>
+                <a href="https://rashimisra.github.io/project1/" target="_blank">UK Parliamentary Suspensions</a>
+                <span class="desc">• Patterns behind 21 MP suspensions (2008–2021)</span>
+            </li>
+            <li>
+                <a href="https://flaskapp-9tdq.onrender.com/" target="_blank">Chinese Loans to Africa Database</a>
+                <span class="desc">• 2000–2023 interactive database [<a href="https://github.com/rashimisra/flaskapp" target="_blank">GitHub</a>]</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Other Stories</h2>
+        <ul class="project-list">
+            <li>
+                <a href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/" target="_blank">City Swaps Soil for Synthetic</a>
+                <span class="desc">• NYC's artificial green spaces and rising concerns</span>
+            </li>
+            <li>
+                <a href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">First Legal Cannabis Dispensaries in Uptown</a>
+                <span class="desc">• Tracking the arrival of legal cannabis in Inwood & Washington Heights</span>
+            </li>
+        </ul>
+    </div>
+</main>
 </body>
 </html>
