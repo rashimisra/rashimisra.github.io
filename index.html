@@ -2,135 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashi Mishra Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rashi Mishra</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <style>
         body {
+            font-family: "Source Code Pro", monospace;
+            background: #f5f6fa;
+            color: #222;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        main {
+            max-width: 640px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px #e0e0e0;
+            padding: 32px;
         }
         h1 {
-            font-size: 2.4em;
-            font-weight: 400;
-            margin-bottom: 1rem;
+            font-size: 2.3em;
+            letter-spacing: 1px;
         }
-        h3 {
-            font-size: 1.3em;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
+        h2 {
+            margin-top: 2em;
+            font-size: 1.25em;
+            color: #444;
+            border-bottom: 1.5px dashed #d8d8d8;
+            padding-bottom: 0.3em;
         }
-        a {
-            color: #555;
+        .section {
+            margin-bottom: 2em;
+        }
+        .links a {
+            margin-right: 18px;
+            background: #ececec;
+            color: #183153;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-weight: 700;
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.2s ease;
+            transition: background 0.2s;
+            font-size: 1em;
         }
-        a:hover {
-            border-bottom-color: #555;
+        .links a:hover {
+            background: #d4e6fd;
         }
-        .intro {
-            font-size: 1.1em;
-            margin-bottom: 2rem;
-            line-height: 1.7;
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .contact {
-            margin: 2rem 0;
-            padding: 1rem 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+        .project-list li {
+            margin-bottom: 1.1em;
         }
-        .contact a {
-            margin-right: 1.5rem;
+        .project-list a {
+            font-weight: 700;
+            color: #374151;
         }
-        .project {
-            margin-bottom: 2rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        .project p {
-            margin-top: 0.5rem;
+        .desc {
+            margin-left: 16px;
             color: #555;
+            font-size: 0.98em;
+        }
+        @media (max-width: 700px) {
+            main { padding: 16px; }
+            h1 { font-size: 1.5em; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Rashi Mishra</h1>
-        <p class="intro">
-            Hi! I am a digital journalist and is currently studying at Columbia Journalism School.<br>
-            <strong>Previous education:</strong> City, University of London; Asian College of Journalism; Lady Shri Ram College, University of Delhi<br>
-            <strong>Previous work:</strong> <a href="https://indianexpress.com/profile/author/rashi-mishra/">The Indian Express</a>, Freelance (London): PA Media, <a href="https://www.inma.org/author/Rashi-Mishra">INMA World Congress</a>, British Doc Filmmaker<br>
-            <strong>Computing languages:</strong> Python, SQL, R
+<main>
+    <h1>Rashi Mishra</h1>
+    <div class="section">
+        <p>
+            Digital journalist at <a href="https://journalism.columbia.edu/" target="_blank">Columbia Journalism School</a><br>
+            Prev: City, University of London • Asian College of Journalism • LSR, Delhi University
+            <br>
+            Byline: 
+            <a href="https://indianexpress.com/profile/author/rashi-mishra/" target="_blank">The Indian Express</a>,
+            Freelance with PA Media, <a href="https://www.inma.org/author/Rashi-Mishra" target="_blank">INMA World Congress</a>, British Doc Filmmaker
+            <br>
+            Coding: Python • SQL • R
         </p>
-        
-        <div class="contact">
-            <a href="mailto:rm4063@columbia.edu">rm4063@columbia.edu</a>
-            <a href="https://github.com/rashimisra">Github</a>
-            <a href="https://www.linkedin.com/in/rashirecords98/">LinkedIn</a>
-            <a href="https://bsky.app/profile/rashimishra.bsky.social">Bluesky</a>
-        </div>
-
-        <div class="division">
-                <h2>Data Stories</h2>
-            </div>
-        
-        <div class="project">
-                <h3><a href="https://rashimisra.github.io/IVY-FUNDING/">Visualizing Ivy Funds</a></h3>
-                <p>Federal Cuts on Ivy Leagues: Why do they matter?</p>
-            </div>
-
-        <div class="project">
-                <h3><a href="https://rashimisra.github.io/Chinavisits_responsive-ai2html/">Chinese Leaders Visits</a></h3>
-                <p>China's Powerful Duo Jiabao and Jintao dominated international visits from 1997 to early 2020</p>
-            </div>
-
-        <div class="project">
-                <h3><a href="https://rashimisra.github.io/fines_by_coib_2014-25/">NYC COIB Fines</a></h3>
-                <p>Amount (US $) and number of times fines paid by NYC government agencies for conflict of interests</p>
-            </div>
-
-        <div class="project">
-                <h3><a href="https://github.com/rashimisra/in-one-chart">California Fire Suppression Funds</a></h3>
-                <p>Fire suppression costs for the California Department of Forestry and Fire Protection (CAL FIRE) and the National Interagency Fire Center (NIFC) from 2015 to 2024</p>
-            </div>
-
-         <div class="project">
-                <h3><a href="https://rashimisra.github.io/project1/">UK Parliamentary Suspensions</a></h3>
-                <p>Analytical project examining 21 MP suspensions over a 13-year period, exploring patterns of political misconduct</p>
-            </div>
-        
-        <div class="projects">
-            <div class="project">
-                <h3><a href="https://flaskapp-9tdq.onrender.com/">Chinese Loans to Africa Database</a></h3>
-                <p><a = href = "https://github.com/rashimisra/flaskapp">Live website for Chinese Loans to Africa Database</a> (2000-2023), created in collaboration with Boston University's Global Development Policy Center</p>
-            </div>
-
-        <div class="division">
-                <h2>Other Stories</h2>
-            </div>
-
-        <div class="projects">
-            <div class="project">
-                <h3><a href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/">City Increasingly Swaps Soil for Synthetic as Green Space Gets Less Green</a></h3>
-                <p>The field in Bennett Park, opened in November, is joining a growing number of green spaces in New York City that are actually plastic, drawing questions and concerns from environmentalists and residents.</p>
-            </div>
-
-        <div class="projects">
-            <div class="project">
-                <h3><a href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/">First Legal Cannabis Dispensaries in Uptown</a></h3>
-                <p>Inwood and Washington Heights are the latest uptown neighborhoods to open licensed cannabis shops, nearly three years after adult use of cannabis became legal in New York State.</p>
-            </div>
-            
+        <div class="links">
+            <a href="mailto:rm4063@columbia.edu">Email</a>
+            <a href="https://github.com/rashimisra" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/rashirecords98/" target="_blank">LinkedIn</a>
+            <a href="https://bsky.app/profile/rashimishra.bsky.social" target="_blank">Bluesky</a>
+            <a href="Rashi Mishra Resume.pdf" target="_blank">CV</a>
         </div>
     </div>
+
+    <div class="section">
+        <h2>Data Stories</h2>
+        <ul class="project-list">
+            <li>
+                <a href="https://rashimisra.github.io/IVY-FUNDING/" target="_blank">Visualizing Ivy Funds</a>
+                <span class="desc">• Federal cuts on Ivy Leagues: Why do they matter?</span>
+            </li>
+            <li>
+                <a href="https://rashimisra.github.io/Chinavisits_responsive-ai2html/" target="_blank">Chinese Leaders Visits</a>
+                <span class="desc">• Jiabao and Jintao's international tours, 1997–2020</span>
+            </li>
+            <li>
+                <a href="https://rashimisra.github.io/fines_by_coib_2014-25/" target="_blank">NYC COIB Fines</a>
+                <span class="desc">• NYC agencies and conflict of interest fines (amounts & frequency)</span>
+            </li>
+            <li>
+                <a href="https://github.com/rashimisra/in-one-chart" target="_blank">California Fire Suppression Funds</a>
+                <span class="desc">• Costs for CAL FIRE/NIFC, 2015–2024</span>
+            </li>
+            <li>
+                <a href="https://rashimisra.github.io/project1/" target="_blank">UK Parliamentary Suspensions</a>
+                <span class="desc">• Patterns behind 21 MP suspensions (2008–2021)</span>
+            </li>
+            <li>
+                <a href="https://flaskapp-9tdq.onrender.com/" target="_blank">Chinese Loans to Africa Database</a>
+                <span class="desc">• 2000–2023 interactive database [<a href="https://github.com/rashimisra/flaskapp" target="_blank">GitHub</a>]</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Other Stories</h2>
+        <ul class="project-list">
+            <li>
+                <a href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/" target="_blank">City Swaps Soil for Synthetic</a>
+                <span class="desc">• NYC's artificial green spaces and rising concerns</span>
+            </li>
+            <li>
+                <a href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">First Legal Cannabis Dispensaries in Uptown</a>
+                <span class="desc">• Tracking the arrival of legal cannabis in Inwood & Washington Heights</span>
+            </li>
+        </ul>
+    </div>
+</main>
 </body>
 </html>
