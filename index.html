@@ -1,137 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rashi Mishra</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Source Code Pro", monospace;
-            background: #f5f6fa;
-            color: #222;
-            margin: 0;
-            padding: 0;
-        }
-        main {
-            max-width: 640px;
-            margin: 32px auto;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 2px 8px #e0e0e0;
-            padding: 32px;
-        }
-        h1 {
-            font-size: 2.3em;
-            letter-spacing: 1px;
-        }
-        h2 {
-            margin-top: 2em;
-            font-size: 1.25em;
-            color: #444;
-            border-bottom: 1.5px dashed #d8d8d8;
-            padding-bottom: 0.3em;
-        }
-        .section {
-            margin-bottom: 2em;
-        }
-        .links a {
-            margin-right: 18px;
-            background: #ececec;
-            color: #183153;
-            padding: 4px 12px;
-            border-radius: 3px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: background 0.2s;
-            font-size: 1em;
-        }
-        .links a:hover {
-            background: #d4e6fd;
-        }
-        .project-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .project-list li {
-            margin-bottom: 1.1em;
-        }
-        .project-list a {
-            font-weight: 700;
-            color: #374151;
-        }
-        .desc {
-            margin-left: 16px;
-            color: #555;
-            font-size: 0.98em;
-        }
-        @media (max-width: 700px) {
-            main { padding: 16px; }
-            h1 { font-size: 1.5em; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rashi Mishra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #f7f6f3;
+      --ink:         #1a1a2e;
+      --ink2:        #3a3a52;
+      --muted:       #7a7a96;
+      --faint:       #b8b8cc;
+      --rule:        #e0dff0;
+      --violet:      #6b4fbb;
+      --violet-dark: #4e3a8a;
+      --violet-light: #f0edfb;
+    }
+
+    body {
+      font-family: 'Source Code Pro', monospace;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.65;
+      margin: 0;
+      padding: 0;
+    }
+
+    .topbar {
+      width: 100%;
+      height: 3px;
+      background: var(--violet);
+    }
+
+    .wrap {
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 6rem;
+    }
+
+    /* Header */
+    .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .name em {
+      font-style: italic;
+      color: var(--violet);
+    }
+
+    .tagline {
+      font-size: 11.5px;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      margin-bottom: 1.6rem;
+      line-height: 1.9;
+    }
+
+    .tagline .dot {
+      color: var(--violet);
+      margin: 0 5px;
+      font-size: 9px;
+      vertical-align: middle;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 3.5rem;
+    }
+
+    .links a {
+      font-size: 11px;
+      font-family: 'Source Code Pro', monospace;
+      text-decoration: none;
+      padding: 5px 14px;
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+      transition: all 0.15s ease;
+    }
+
+    .links a.primary {
+      background: var(--violet);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .links a.primary:hover {
+      background: var(--violet-dark);
+    }
+
+    .links a.sec {
+      border: 1px solid var(--rule);
+      color: var(--ink2);
+      background: #fff;
+    }
+
+    .links a.sec:hover {
+      border-color: var(--violet);
+      color: var(--violet);
+    }
+
+    /* Sections */
+    section { margin-bottom: 3rem; }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--violet);
+      white-space: nowrap;
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* Story rows */
+    .story {
+      display: block;
+      padding: 13px 0 13px 14px;
+      border-left: 2px solid transparent;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, background 0.15s;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .story:first-of-type { border-top: 1px solid var(--rule); }
+
+    .story:hover {
+      border-left-color: var(--violet);
+      background: var(--violet-light);
+    }
+
+    .story-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .arrow {
+      font-size: 13px;
+      color: var(--faint);
+      flex-shrink: 0;
+      transition: color 0.15s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .story:hover .arrow {
+      color: var(--violet);
+      transform: translateX(3px);
+    }
+
+    .story-desc {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .story-sub {
+      font-size: 11px;
+      color: var(--faint);
+      margin-top: 3px;
+    }
+
+    .story-sub a { color: var(--faint); text-decoration: none; }
+    .story-sub a:hover { color: var(--violet); }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 10.5px;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 2.5rem 1.25rem 4rem; }
+      .name { font-size: 1.9rem; }
+    }
+  </style>
 </head>
 <body>
-<main>
-    <h1>Rashi Mishra</h1>
-    <div class="section">
-        <p>
-            Journalist
-            Schools: Columbia University — City, University of London
-            <br>
-            Work: 
-            <a href="https://indianexpress.com/profile/author/rashi-mishra/" target="_blank">The Indian Express</a>,
-            Freelance with PA Media, <a href="https://www.inma.org/author/Rashi-Mishra" target="_blank">INMA World Congress</a>
-            Coding: Python — SQL — R
-        </p>
-        <div class="links">
-            <a href="mailto:rashimishra301@gmail.com">Email</a>
-            <a href="https://github.com/rashimisra" target="_blank">Github</a>
-            <a href="https://www.linkedin.com/in/rashirecords98/" target="_blank">LinkedIn</a>
-            <a href="Rashi Mishra CV.pdf" target="_blank">CV</a>
-        </div>
+
+<div class="topbar"></div>
+
+<div class="wrap">
+
+  <header style="margin-bottom: 2.5rem;">
+    <h1 class="name">Rashi<br><em>Mishra</em></h1>
+    <p class="tagline">
+      Journalist
+      <span class="dot">◆</span>
+      The Indian Express · PA Media · INMA
+      <span class="dot">◆</span>
+      Columbia University &amp; City, University of London
+      <span class="dot">◆</span>
+      Python · SQL · R
+    </p>
+    <div class="links">
+      <a class="primary" href="mailto:rashimishra301@gmail.com">Email</a>
+      <a class="sec" href="https://github.com/rashimisra" target="_blank">GitHub</a>
+      <a class="sec" href="https://www.linkedin.com/in/rashirecords98/" target="_blank">LinkedIn</a>
+      <a class="sec" href="Rashi Mishra CV.pdf" target="_blank">CV</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <span class="section-label">Data stories</span>
+      <div class="section-rule"></div>
     </div>
 
-    <div class="section">
-        <h2>Data Stories</h2>
-        <ul class="project-list">
-            <li>
-                <a href="https://rashimisra.github.io/Master-s-Project/" target="_blank">Effect of US-China Tarrif on Toy Industry in the USA through Labubus</a>
-                <span class="desc">• The Demented Nine-Toothed Face of the Toy Industry’s Tariff Troubles</span>
-            </li>
-            <li>
-                <a href="https://rashimisra.github.io/IVY-FUNDING/" target="_blank">Visualizing Ivy Funds</a>
-                <span class="desc">• Federal cuts on Ivy Leagues: Why do they matter?</span>
-            </li>
-            <li>
-                <a href="https://rashimisra.github.io/fines_by_coib_2014-25/" target="_blank">NYC COIB Fines</a>
-                <span class="desc">• NYC agencies and conflict of interest fines (amounts & frequency)</span>
-            </li>
-            <li>
-                <a href="https://github.com/rashimisra/in-one-chart" target="_blank">California Fire Suppression Funds</a>
-                <span class="desc">• Costs for CAL FIRE/NIFC, 2015–2024</span>
-            </li>
-            <li>
-                <a href="https://flaskapp-9tdq.onrender.com/" target="_blank">Chinese Loans to Africa Database</a>
-                <span class="desc">• 2000–2023 interactive database [<a href="https://github.com/rashimisra/flaskapp" target="_blank">GitHub</a>]</span>
-            </li>
-        </ul>
+    <a class="story" href="https://rashimisra.github.io/Master-s-Project/" target="_blank">
+      <div class="story-title">Effect of US–China Tariffs on the Toy Industry via Labubus <span class="arrow">→</span></div>
+      <div class="story-desc">The demented nine-toothed face of tariff troubles</div>
+    </a>
+
+    <a class="story" href="https://rashimisra.github.io/IVY-FUNDING/" target="_blank">
+      <div class="story-title">Visualizing Ivy Funds <span class="arrow">→</span></div>
+      <div class="story-desc">Federal cuts on Ivy Leagues: why they matter</div>
+    </a>
+
+    <a class="story" href="https://rashimisra.github.io/fines_by_coib_2014-25/" target="_blank">
+      <div class="story-title">NYC COIB Fines <span class="arrow">→</span></div>
+      <div class="story-desc">City agencies and conflict-of-interest fines, 2014–25</div>
+    </a>
+
+    <a class="story" href="https://github.com/rashimisra/in-one-chart" target="_blank">
+      <div class="story-title">California Fire Suppression Funds <span class="arrow">→</span></div>
+      <div class="story-desc">CAL FIRE / NIFC costs, 2015–2024</div>
+    </a>
+
+    <a class="story" href="https://flaskapp-9tdq.onrender.com/" target="_blank">
+      <div class="story-title">Chinese Loans to Africa Database <span class="arrow">→</span></div>
+      <div class="story-desc">Interactive database, 2000–2023</div>
+      <div class="story-sub" onclick="event.stopPropagation()">
+        <a href="https://github.com/rashimisra/flaskapp" target="_blank">GitHub ↗</a>
+      </div>
+    </a>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-label">Other stories</span>
+      <div class="section-rule"></div>
     </div>
 
-    <div class="section">
-        <h2>Other Stories</h2>
-        <ul class="project-list">
-            <li>
-                <a href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/" target="_blank">City Swaps Soil for Synthetic</a>
-                <span class="desc">• NYC's artificial green spaces and rising concerns</span>
-            </li>
-            <li>
-                <a href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">First Legal Cannabis Dispensaries in Uptown</a>
-                <span class="desc">• Tracking the arrival of legal cannabis in Inwood & Washington Heights</span>
-            </li>
-        </ul>
-    </div>
-</main>
+    <a class="story" href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/" target="_blank">
+      <div class="story-title">City Swaps Soil for Synthetic <span class="arrow">→</span></div>
+      <div class="story-desc">NYC's artificial green spaces and rising concerns</div>
+    </a>
+
+    <a class="story" href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">
+      <div class="story-title">First Legal Cannabis Dispensaries in Uptown <span class="arrow">→</span></div>
+      <div class="story-desc">Inwood & Washington Heights go legal</div>
+    </a>
+  </section>
+
+  <p class="footer">rashimishra301@gmail.com</p>
+
+</div>
 </body>
 </html>
