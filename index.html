@@ -248,6 +248,159 @@
     .story-sub a { color: var(--faint); text-decoration: none; }
     .story-sub a:hover { color: var(--violet); }
 
+    /* ── MAPS GRID ── */
+    .maps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 0.2rem;
+    }
+    .map-thumb {
+      position: relative;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      background: var(--violet-light);
+      aspect-ratio: 4/3;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.18s;
+    }
+    .map-thumb:hover {
+      border-color: var(--violet);
+      box-shadow: 0 4px 18px rgba(107, 79, 187, 0.15);
+      transform: translateY(-2px);
+    }
+    .map-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.15s;
+    }
+    .map-thumb:hover img { opacity: 0.88; }
+    .map-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      background: linear-gradient(to top, rgba(26,26,46,0.72) 0%, transparent 55%);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .map-thumb:hover .map-overlay { opacity: 1; }
+    .map-overlay-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .map-zoom-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 24px;
+      height: 24px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .map-thumb:hover .map-zoom-icon { opacity: 1; }
+ 
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(15, 14, 30, 0.94);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      max-width: 90vw;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+      display: block;
+    }
+    .lightbox-caption {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--violet-mid);
+    }
+    .lightbox-counter {
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.12em;
+    }
+    .lb-btn {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, border-color 0.15s;
+      z-index: 1001;
+    }
+    .lb-btn:hover {
+      background: rgba(107, 79, 187, 0.35);
+      border-color: var(--violet-mid);
+    }
+    .lb-prev { left: 1.5rem; }
+    .lb-next { right: 1.5rem; }
+    .lb-close {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      z-index: 1001;
+    }
+    .lb-close:hover { background: rgba(200, 60, 60, 0.3); }
+
     /* animations */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(14px); }
@@ -338,6 +491,50 @@
     </section>
 
     <section>
+  <div class="section-head">
+    <span class="section-label">Maps</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="maps-grid" id="mapsGrid">
+
+    <!-- Copy this block for each map. Replace src and both label texts. -->
+    <div class="map-thumb" data-caption="NYC Democratic Party's Mayoral Primary Election">
+      <img src="election mapp.png" alt="Your Map Title" loading="lazy">
+      <div class="map-overlay">
+        <span class="map-overlay-label">Your Map Title</span>
+      </div>
+      <div class="map-zoom-icon">⤢</div>
+    </div>
+
+    <div class="map-thumb" data-caption="NYC Democratic Party's Mayoral Primary Analysis by Borough">
+      <img src="map.new.png" alt="Your Map Title" loading="lazy">
+      <div class="map-overlay">
+        <span class="map-overlay-label">Your Map Title</span>
+      </div>
+      <div class="map-zoom-icon">⤢</div>
+    </div>
+
+    <div class="map-thumb" data-caption="Zohran Mamdani’s Vote Share In The N.Y.C Mayoral Primary">
+      <img src="map.svg" alt="Your Map Title" loading="lazy">
+      <div class="map-overlay">
+        <span class="map-overlay-label">Your Map Title</span>
+      </div>
+      <div class="map-zoom-icon">⤢</div>
+    </div>
+
+    <div class="map-thumb" data-caption="Where China Makes the World's Labubus (Thesis)">
+      <img src="final map.png" alt="Your Map Title" loading="lazy">
+      <div class="map-overlay">
+        <span class="map-overlay-label">Your Map Title</span>
+      </div>
+      <div class="map-zoom-icon">⤢</div>
+    </div>
+    
+
+  </div>
+</section>
+
+    <section>
       <div class="section-head">
         <span class="section-label">Other stories</span>
         <div class="section-rule"></div>
@@ -356,6 +553,51 @@
 
   </main>
 </div>
+
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev">←</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lbImg" src="" alt="">
+    <div class="lightbox-caption" id="lbCaption"></div>
+    <div class="lightbox-counter" id="lbCounter"></div>
+  </div>
+  <button class="lb-btn lb-next" id="lbNext">→</button>
+</div>
+
+<script>
+  const thumbs   = Array.from(document.querySelectorAll('.map-thumb'));
+  const lightbox = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lbImg');
+  const lbCap    = document.getElementById('lbCaption');
+  const lbCount  = document.getElementById('lbCounter');
+  let current    = 0;
+
+  function open(index) { current = index; update(); lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close() { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+  function update() {
+    const t = thumbs[current];
+    lbImg.src = t.querySelector('img').src;
+    lbImg.alt = t.dataset.caption || '';
+    lbCap.textContent   = t.dataset.caption || '';
+    lbCount.textContent = `${current + 1} / ${thumbs.length}`;
+  }
+  function prev() { current = (current - 1 + thumbs.length) % thumbs.length; update(); }
+  function next() { current = (current + 1) % thumbs.length; update(); }
+
+  thumbs.forEach((t, i) => t.addEventListener('click', () => open(i)));
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', prev);
+  document.getElementById('lbNext').addEventListener('click', next);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+</script>
 
 </body>
 </html>
