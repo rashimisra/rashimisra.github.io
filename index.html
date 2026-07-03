@@ -189,6 +189,35 @@
       background: var(--rule);
     }
 
+    /* subsections */
+    .subsection { margin-bottom: 1.8rem; }
+    .subsection:last-child { margin-bottom: 0; }
+
+    .subsection-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 0.2rem 0;
+      padding-top: 0.4rem;
+    }
+
+    .subsection-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink2);
+    }
+
+    .subsection-link {
+      font-size: 10px;
+      color: var(--violet);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    .subsection-link:hover { text-decoration: underline; }
+
     /* story rows */
     .story {
       display: block;
@@ -201,6 +230,8 @@
     }
 
     .story:first-of-type { border-top: 1px solid var(--rule); }
+
+    .subsection .story:first-of-type { border-top: 1px solid var(--rule); }
 
     .story:hover {
       border-left-color: var(--violet);
@@ -535,6 +566,37 @@
 
     <section>
       <div class="section-head">
+        <span class="section-label">Audience Development &amp; News Subscriptions</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-head">
+          <span class="subsection-label">City, St George's Work</span>
+          <a class="subsection-link" href="https://www.interhacktives.com/author/rashimishra/" target="_blank">View all on Interhacktives →</a>
+        </div>
+
+        <a class="story" href="https://www.interhacktives.com/author/rashimishra/" target="_blank">
+          <div class="story-title">Interhacktives Author Archive <span class="arrow">→</span></div>
+          <div class="story-desc">Reporting and audience-focused pieces written during my studies at City, St George's, University of London</div>
+        </a>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-head">
+          <span class="subsection-label">INMA</span>
+          <a class="subsection-link" href="https://www.inma.org/author/Rashi-Mishra" target="_blank">View all on INMA →</a>
+        </div>
+
+        <a class="story" href="https://www.inma.org/author/Rashi-Mishra" target="_blank">
+          <div class="story-title">INMA Author Archive <span class="arrow">→</span></div>
+          <div class="story-desc">Writing on audience, data, and revenue strategy for the International News Media Association</div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
         <span class="section-label">Other stories</span>
         <div class="section-rule"></div>
       </div>
@@ -547,6 +609,18 @@
       <a class="story" href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">
         <div class="story-title">First Legal Cannabis Dispensaries in Uptown <span class="arrow">→</span></div>
         <div class="story-desc">Inwood & Washington Heights go legal</div>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-label">Columns</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <a class="story" href="https://www.moderntreatise.com/africa?author=6952b5ab6d36f421c0df4ad7" target="_blank">
+        <div class="story-title">Modern Treatise — Africa Column <span class="arrow">→</span></div>
+        <div class="story-desc">Column writing for Modern Treatise's Africa coverage</div>
       </a>
     </section>
 
