@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rashi Mishra — New York City</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <h1 class="name">Rashi<em>Mishra</em></h1>
+      <p class="role">New York City</p>
+
+      <div class="bio">
+        <span class="bio-item"><strong>Based</strong> New York, NY</span>
+        <span class="bio-item"><strong>Studied</strong> Columbia University</span>
+      </div>
+
+      <div class="side-rule"></div>
+
+      <nav class="nav-links">
+        <a class="primary" href="index.html">← Home</a>
+        <a href="mailto:rashimishra301@gmail.com">Email</a>
+        <a href="https://github.com/rashimisra" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <a class="back-link" href="index.html">← Back to portfolio</a>
+
+    <p class="intro">
+      New York is where I've done the bulk of my data reporting — from my Master's thesis at Columbia Journalism School to local accountability stories about city agencies, elections, and neighborhoods.
+    </p>
+
+    <section>
+      <div class="section-head">
+        <span class="section-label">Data stories</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <a class="story" href="https://rashimisra.github.io/Master-s-Project/" target="_blank">
+        <div class="story-title">Effect of US–China Tariffs on the Toy Industry via Labubus <span class="arrow">→</span></div>
+        <div class="story-desc">Master's thesis, Columbia Journalism School</div>
+      </a>
+
+      <a class="story" href="https://rashimisra.github.io/IVY-FUNDING/" target="_blank">
+        <div class="story-title">Visualizing Ivy Funds <span class="arrow">→</span></div>
+        <div class="story-desc">Federal cuts on Ivy Leagues: why they matter</div>
+      </a>
+
+      <a class="story" href="https://rashimisra.github.io/fines_by_coib_2014-25/" target="_blank">
+        <div class="story-title">NYC COIB Fines <span class="arrow">→</span></div>
+        <div class="story-desc">City agencies and conflict-of-interest fines, 2014–25</div>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-label">CJS Other stories</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <a class="story" href="https://columbianewsservice.com/2025/04/17/city-increasingly-swaps-soil-for-synthetic-as-green-space-gets-less-green/" target="_blank">
+        <div class="story-title">City Swaps Soil for Synthetic <span class="arrow">→</span></div>
+        <div class="story-desc">How NYC's synthetic turf fields are affecting the health and environment of local communities</div>
+      </a>
+
+      <a class="story" href="https://theuptowner.org/despite-legal-and-economic-hurdles-first-legal-cannabis-dispensaries-open-in-inwood-and-washington-heights/" target="_blank">
+        <div class="story-title">First Legal Cannabis Dispensaries in Uptown <span class="arrow">→</span></div>
+        <div class="story-desc">Inwood & Washington Heights go legal</div>
+      </a>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-label">Maps</span>
+        <div class="section-rule"></div>
+      </div>
+      <div class="maps-grid" id="mapsGrid">
+
+        <div class="map-thumb" data-caption="NYC Democratic Party's Mayoral Primary Election">
+          <img src="election mapp.png" alt="NYC Democratic Party's Mayoral Primary Election" loading="lazy">
+          <div class="map-overlay">
+            <span class="map-overlay-label">NYC Democratic Party's Mayoral Primary Election</span>
+          </div>
+          <div class="map-zoom-icon">⤢</div>
+        </div>
+
+        <div class="map-thumb" data-caption="NYC Democratic Party's Mayoral Primary Analysis by Borough">
+          <img src="map.new.png" alt="NYC Democratic Party's Mayoral Primary Analysis by Borough" loading="lazy">
+          <div class="map-overlay">
+            <span class="map-overlay-label">NYC Democratic Party's Mayoral Primary Analysis by Borough</span>
+          </div>
+          <div class="map-zoom-icon">⤢</div>
+        </div>
+
+        <div class="map-thumb" data-caption="Zohran Mamdani’s Vote Share In The N.Y.C Mayoral Primary">
+          <img src="map.svg" alt="Zohran Mamdani’s Vote Share In The N.Y.C Mayoral Primary" loading="lazy">
+          <div class="map-overlay">
+            <span class="map-overlay-label">Zohran Mamdani’s Vote Share In The N.Y.C Mayoral Primary</span>
+          </div>
+          <div class="map-zoom-icon">⤢</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev">←</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lbImg" src="" alt="">
+    <div class="lightbox-caption" id="lbCaption"></div>
+    <div class="lightbox-counter" id="lbCounter"></div>
+  </div>
+  <button class="lb-btn lb-next" id="lbNext">→</button>
+</div>
+
+<script>
+  const thumbs   = Array.from(document.querySelectorAll('.map-thumb'));
+  const lightbox = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lbImg');
+  const lbCap    = document.getElementById('lbCaption');
+  const lbCount  = document.getElementById('lbCounter');
+  let current    = 0;
+
+  function open(index) { current = index; update(); lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close() { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+  function update() {
+    const t = thumbs[current];
+    lbImg.src = t.querySelector('img').src;
+    lbImg.alt = t.dataset.caption || '';
+    lbCap.textContent   = t.dataset.caption || '';
+    lbCount.textContent = `${current + 1} / ${thumbs.length}`;
+  }
+  function prev() { current = (current - 1 + thumbs.length) % thumbs.length; update(); }
+  function next() { current = (current + 1) % thumbs.length; update(); }
+
+  thumbs.forEach((t, i) => t.addEventListener('click', () => open(i)));
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', prev);
+  document.getElementById('lbNext').addEventListener('click', next);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+</script>
+
+</body>
+</html>
