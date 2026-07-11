@@ -51,7 +51,7 @@ body {
 
 .name {
   font-family: 'DM Serif Display', serif;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.0;
   color: #fff;
@@ -66,7 +66,7 @@ body {
 }
 
 .role {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -83,7 +83,7 @@ body {
 }
 
 .bio-item {
-  font-size: 11px;
+  font-size: 12px;
   color: rgba(255,255,255,0.45);
   letter-spacing: 0.03em;
   line-height: 1.6;
@@ -107,7 +107,7 @@ body {
 }
 
 .nav-links a {
-  font-size: 11px;
+  font-size: 12px;
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -489,10 +489,10 @@ section { margin-bottom: 4rem; }
   stroke-width: 4;
   transition: fill 0.15s, r 0.15s;
 }
-.pin:hover .pin-dot { fill: var(--violet-dark); r: 19; }
+.pin:hover .pin-dot { fill: var(--violet-dark); r: 18; }
 .pin-label {
   font-family: 'Source Code Pro', monospace;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: 0.04em;
   fill: var(--ink2);
@@ -500,7 +500,7 @@ section { margin-bottom: 4rem; }
 }
 .pin-sublabel {
   font-family: 'Source Code Pro', monospace;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   fill: var(--muted);
@@ -508,9 +508,9 @@ section { margin-bottom: 4rem; }
 .pin:hover .pin-label { fill: var(--violet); }
 
 @keyframes pinPulse {
-  0%   { r: 14;  opacity: 0.5; }
-  70%  { r: 42; opacity: 0; }
-  100% { r: 42; opacity: 0; }
+  0%   { r: 13;  opacity: 0.5; }
+  70%  { r: 40; opacity: 0; }
+  100% { r: 40; opacity: 0; }
 }
 
 /* homepage gets a bit more breathing room for the bigger map */
