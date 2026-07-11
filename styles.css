@@ -492,7 +492,7 @@ section { margin-bottom: 4rem; }
 .pin:hover .pin-dot { fill: var(--violet-dark); r: 18; }
 .pin-label {
   font-family: 'Source Code Pro', monospace;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.04em;
   fill: var(--ink2);
@@ -500,7 +500,7 @@ section { margin-bottom: 4rem; }
 }
 .pin-sublabel {
   font-family: 'Source Code Pro', monospace;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   fill: var(--muted);
