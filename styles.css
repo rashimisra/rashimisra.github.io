@@ -66,7 +66,7 @@ body {
 }
 
 .role {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -83,7 +83,7 @@ body {
 }
 
 .bio-item {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255,255,255,0.45);
   letter-spacing: 0.03em;
   line-height: 1.6;
@@ -107,7 +107,7 @@ body {
 }
 
 .nav-links a {
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -141,7 +141,7 @@ body {
 
 /* intro */
 .intro {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--ink2);
   line-height: 1.9;
   margin-bottom: 3.5rem;
@@ -167,7 +167,7 @@ section { margin-bottom: 4rem; }
 }
 
 .section-label {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -194,7 +194,7 @@ section { margin-bottom: 4rem; }
 }
 
 .subsection-label {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -202,7 +202,7 @@ section { margin-bottom: 4rem; }
 }
 
 .subsection-link {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--violet);
   text-decoration: none;
   letter-spacing: 0.03em;
@@ -256,14 +256,14 @@ section { margin-bottom: 4rem; }
 }
 
 .story-desc {
-  font-size: 12.5px;
+  font-size: 14px;
   color: var(--muted);
   margin-top: 5px;
   line-height: 1.5;
 }
 
 .story-sub {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--faint);
   margin-top: 4px;
 }
@@ -283,7 +283,7 @@ section { margin-bottom: 4rem; }
 }
 .story.placeholder:hover .arrow { color: var(--faint); transform: none; }
 .placeholder-flag {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -335,9 +335,9 @@ section { margin-bottom: 4rem; }
   opacity: 0;
   transition: opacity 0.2s;
 }
-.map-thumb:hover .map-overlay { opacity: 1; }
+.map-thumb:hover .map-overlay { opacity: 0.5; }
 .map-overlay-label {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -410,7 +410,7 @@ section { margin-bottom: 4rem; }
   border: 1px solid rgba(255,255,255,0.12);
   color: #fff;
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-size: 16px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -435,7 +435,7 @@ section { margin-bottom: 4rem; }
   border: 1px solid rgba(255,255,255,0.12);
   color: #fff;
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-size: 16px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -492,7 +492,7 @@ section { margin-bottom: 4rem; }
 .pin:hover .pin-dot { fill: var(--violet-dark); r: 18; }
 .pin-label {
   font-family: 'Source Code Pro', monospace;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.04em;
   fill: var(--ink2);
@@ -532,7 +532,7 @@ section + section { animation-delay: 0.3s; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
