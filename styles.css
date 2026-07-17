@@ -295,6 +295,24 @@ section { margin-bottom: 4rem; }
   flex-shrink: 0;
 }
 
+/* static story row (proposals/concepts — not a clickable link) */
+.story-static {
+  cursor: default;
+}
+.story-static:hover {
+  border-left-color: transparent;
+  background: transparent;
+  padding-left: 20px;
+}
+.story-meta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
 /* ── MAPS GRID (photo maps section) ── */
 .maps-grid {
   display: grid;
