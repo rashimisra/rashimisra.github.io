@@ -151,55 +151,6 @@
   </div>
   <button class="lb-btn lb-next" id="lbNext">→</button>
 </div>
-<style>
-  /* --- Map thumbnail fix: overlay hidden until hover --- */
-  .map-thumb{
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .map-thumb img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .map-overlay{
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0) 60%);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-  }
-  .map-thumb:hover .map-overlay{
-    opacity: 1;
-  }
-  .map-zoom-icon{
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-  .map-thumb:hover .map-zoom-icon{
-    opacity: 1;
-  }
-  /* --- Static (non-link) story card for proposals/concepts --- */
-  .story-static{
-    display: block;
-    cursor: default;
-  }
-  .story-meta{
-    font-size: 0.85rem;
-    opacity: 0.65;
-    margin: 0.15rem 0 0.4rem;
-  }
-</style>
 <script>
   const thumbs   = Array.from(document.querySelectorAll('.map-thumb'));
   const lightbox = document.getElementById('lightbox');
